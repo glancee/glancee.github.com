@@ -1,0 +1,113 @@
+/**
+ * Created by Andrea Vaccari
+ * Email: andrea@glancee.com
+ */
+
+@import url("reset.css");
+@import url("http://fonts.googleapis.com/css?family=Calligraffitti:regular,bold");
+
+body {
+    background: #bfdeaa url(../images/bg.png) repeat;
+}
+
+#floater {
+    position: absolute;
+    margin-top: -300px; /* half of #content height */
+    top: 50%;
+    width: 100%;
+}
+
+#content {
+    position: relative;
+    height: 600px;
+    margin: 0 auto;
+    color: #1D1B67;
+    text-align: center;
+    width: 960px;
+    text-shadow: 1px 1px 1px #fff
+}
+
+h1 {
+    font: 28px 'Calligraffitti', sans-serif;
+}
+
+img.cut_up {
+    top: -40px;
+    position: relative;
+}
+
+#wrap_form, #wrap_post {
+    position: relative;
+    margin: 0 auto;
+    height: 80px;
+    width: 600px;
+}
+
+#copyright {
+    font: 10px arial;
+}
+
+label.error {
+    color: #f00;
+    position: absolute;
+    font: 10px arial;
+    left: 200px;
+    top: 60px;
+    width: 200px;
+}
+
+input[type=text], input[type=submit] {
+    -webkit-box-shadow: 0px 0px 5px #444;
+    -moz-box-shadow: 0px 0px 5px #444;
+    box-shadow: 0px 0px 5px #444;
+
+    border: 4px solid #fff;
+    float: left;
+    padding: 0 10px;
+}
+
+input[type=text] {
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    height: 40px;
+    width: 470px;
+}
+
+input[type=submit] {
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    background: #fff;
+    cursor: pointer;
+    height: 48px;
+    left: -2px;
+    text-align: center;
+    width: 100px;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+input.active {
+    color: #444;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+input.inactive {
+    color: #888;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+

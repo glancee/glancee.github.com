@@ -1,26 +1,49 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<title>Glancee</title>
-<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold">
-<link type="text/css" rel="stylesheet" href="/resources/css/reset.css"/>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-21455677-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+    <meta charset="utf-8">
+    <title>Glancee</title>
+    <link rel="stylesheet" href="resources/css/screen.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.js"></script>
+    <script type="text/javascript" src="resources/js/main.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21455677-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </head>
-<body style="background:#bfdeaa;">
-    <p style="color: #b22; font: bold 20px 'Droid Sans',sans-serif; text-align:center; text-shadow: 0px 0px 40px #f55">
-    <img src="/resources/images/logo.png" height=50%><br><br><br>
-    <img src="/resources/images/cut_bottom.png"><br><br>
-    coming soon
-    </p>
+<body>
+<div id="floater">
+    <div id="content">
+        <img src="resources/images/iphone.png">
+        <img src="resources/images/strip_up.png" class="cut_up">
+        <h1>Glancee is a fun and safe way to meet interesting people around you</h1>
+        <br><br>
+        <div id="wrap_form">
+            <form action="/" id="join_form">
+                <input type="text" name="entry.0.single" value="Enter your email to receive an early invite!"
+                       class="required email default-value">
+                <input type="hidden" name="pageNumber" value="0">
+                <input type="hidden" name="backupCache" value="">
+                <input type="submit" name="submit" value="Ok" class="active"><br><br>
+            </form>
+        </div>
+        <div id="wrap_post">
+            <br>
+            Thank you for your interest. We will send you an invite soon!
+        </div>
+        <span id="copyright">© 2011 Glancee Inc.</span>
+    </div>
+</div>
 </body>
 </html>
-
