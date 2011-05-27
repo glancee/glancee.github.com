@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="Glancee" />
+    <meta name="Description" content="Glancee is a mobile app that helps you discover and connect with new interesting people around you." />
+    <title>Glancee</title>
+
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../static/css/screen.css" />
+
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.js"></script>
+    <script type="text/javascript" src="../static/fancybox/jquery.fancybox-1.3.4.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $(".link-video").click(function() {
+                $.fancybox({
+                    'autoScale' : false,
+                    'hideOnOverlayClick' : false,
+                    'padding' : 0,
+                    'titleShow' : false,
+                    'transitionIn' : 'none',
+                    'transitionOut' : 'none',
+                    'width' : 800,
+                    'height' : 480,
+                    'href' : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+                    'type' : 'swf',
+                    'swf' : {
+                        'wmode' : 'transparent',
+                        'allowfullscreen' : 'true'
+                    }
+                });
+                return false;
+            });
+            $("#ss-thanks").toggle();
+            $("#ss-form").validate({
+                submitHandler: function(form) {
+                    $.post("https://spreadsheets.google.com/a/glancee.com/formResponse?formkey=dHktYWpaYTNaOGpFZWJ3eDlVYVM2N3c6MQ", $(form).serialize());
+                    $("#ss-form").fadeToggle('fast', function() {
+                        $("#ss-thanks").fadeToggle('fast');
+                    });
+                }
+            });
+        });
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21455677-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body>
+
+<div id="banner-400" style="background: url(../static/images/organizers.jpg) center;">
+    <div id="header">
+        <a class="left" href="http://glancee.com/">
+            <img src="../static/images/logo.png" alt="Glancee Inc.">
+        </a>
+        <a class="right header-name" href="http://glancee.com/events">
+            Glancee for Events
+        </a>
+        <a class="right link-video" href="http://youtube.com/v/YoJvNugMRDM?version=3&autohide=1&autoplay=1&rel=0&showinfo=0&showsearch=0">
+            Watch the video to learn more about Glancee
+        </a>
+        <div class="header-line">
+            <h1>Create more engaging experiences for attendees and sponsors.</h1>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    <div class="columned clearfix">
+        <div class="columned-50">
+            <h3>Why Glancee?</h3>
+            Glancee is a social utility that brings people together by finding the important connections they share.
+            During occasions like conferences, concerts, and sport games Glancee can help event planners create more
+            engaging experiences for attendees and sponsors.
+            <h4>For Attendees</h4>
+            With Glancee, attendees will be able to easily find others who share common friends and similar interests.
+            Glancee makes it easy to connect through instant messaging, voice-over-ip calls, and email. This helps
+            people create new, meaningful connections and participate in more interesting conversations, making your
+            event that much more valuable.
+            <h4>For Sponsors</h4>
+            Staff members and your sponsors can be listed in Glancee as featured users. This makes them appear at the
+            top of our main screen, where we list the most interesting people near the current user. Moreover, if the
+            sponsors will use Glancee too, they will be able to easily discover those in the crowd that are more
+            interested in their services.
+            <h4>Understand your crowd</h4>
+            Finally, we make it easy to get detailed insights of the type of people that are attending your event.
+            Where do they come from? What is their level of education? What are they interested in? How do they
+            interact with other attendees? Our data engine can answer these questions through the analysis of
+            aggregate data, without compromising our users' privacy.
+        </div>
+        <div class="columned-50">
+            <h3>Getting started</h3>
+            To use Glancee for your event, we just need the name, website, time, and place of the event. When Glancee
+            users arrive at the event, they will be greeted by a welcome message to your event and they will be asked
+            to check-in. Once in, they will be able to connect with your featured sponsors and other attendees.
+            If you are interested in finding out more, fill out the form below.
+            <form action="/" method="POST" id="ss-form" class="clearfix">
+                <div class="errorbox-good">
+                    <div class="ss-item  ss-text">
+                        <div class="ss-form-entry">
+                            <label class="ss-q-title" for="entry_0">Contact Name</label>
+                            <label class="ss-q-help" for="entry_0">Required</label><br>
+                            <input type="text" name="entry.0.single" value="" class="ss-q-short required" id="entry_0"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="errorbox-good">
+                    <div class="ss-item  ss-text">
+                        <div class="ss-form-entry">
+                            <label class="ss-q-title" for="entry_1">Contact Email</label>
+                            <label class="ss-q-help" for="entry_1">Required</label><br>
+                            <input type="text" name="entry.1.single" value="" class="ss-q-short required email" id="entry_1"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="errorbox-good">
+                    <div class="ss-item  ss-text">
+                        <div class="ss-form-entry">
+                            <label class="ss-q-title" for="entry_2">Event Website</label>
+                            <label class="ss-q-help" for="entry_2">Required</label><br>
+                            <input type="text" name="entry.2.single" value="" class="ss-q-short required url" id="entry_2"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="errorbox-good">
+                    <div class="ss-item  ss-paragraph-text">
+                        <div class="ss-form-entry">
+                            <label class="ss-q-title" for="entry_3">Event Description</label>
+                            <label class="ss-q-help" for="entry_3">Optional</label><br>
+                            <textarea name="entry.3.single" rows="8" cols="75" class="ss-q-long" id="entry_3"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <input type="hidden" name="pageNumber" value="0">
+                <input type="hidden" name="backupCache" value="">
+                <div class="ss-item ss-navigate">
+                    <div class="ss-form-entry">
+                        <input type="submit" name="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+            <div id="ss-thanks">
+                Thank you for your interest, we will get back to you shortly. Meanwhile, you can go back to
+                <a href="http://glancee.com">our home</a> and try Glancee if you haven't done so already.<br><br>
+                The Glancee Team
+            </div>
+        </div>
+    </div>
+    <div id="content-box">
+        For more information, <a href="mailto:info@glancee.com?subject=Hello Glancee!">send us an email</a>.
+    </div>
+
+    <div class="columned clearfix">
+            <div class="columned-25">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="http://glancee.com">Glancee Home</a></li>
+                    <li><a href="http://blog.glancee.com">Read our Blog</a></li>
+                    <li><a href="http://help.glancee.com">Help and Suggestions</a></li>
+                    <li><a href="http://twitter.com/glanceeapp">Follow Us on Twitter</a></li>
+                    <li><a href="http://facebook.com/glanceeapp">Like Us on Facebook</a></li>
+                </ul>
+            </div>
+            <div class="columned-25">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="columned-50">
+                <h3>Hello from the Glancee team!</h3>
+                We are <a href="http://twitter.com/vccr">Andrea</a>,
+                <a href="http://twitter.com/albertotretti">Alberto</a>,
+                <a href="http://twitter.com/griseg">Gabriel</a>,
+                <a href="http://twitter.com/a_testa">Alessandro</a>, and
+                <a href="http://twitter.com/islamismailov">Islam</a>.
+                We built Glancee to bring together the best of our physical and digital lives.
+                If you love our idea, if it drives you mad, or if you just want to say hello,
+                <a href="mailto:info@glancee.com?subject=Hello Glancee!">send us an email</a>.
+            </div>
+    </div>
+    <div class="copyright">
+        © 2011 Glancee Inc.
+    </div>
+</div>
+</body>
+</html>
