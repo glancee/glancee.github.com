@@ -48,7 +48,7 @@ $(function() {
         return false;
     });
 
-    $("#countdown").countdown({until: new Date(2011, 05, 10)});
+    $("#countdown").countdown({until: new Date(2011, 5, 10)});
 
     LR.lrInstance = new LrInstance('launchrock', {
         tagLine: "Disrupting real-world social interactions!",
@@ -98,4 +98,3 @@ function resizeSlider()
     if (h > 600) h = 600;
     $('.banner-600').height(h);
 }
-

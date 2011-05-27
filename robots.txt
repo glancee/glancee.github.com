@@ -1,2 +1,8 @@
 User-agent: *
+Disallow: /demo/
+Disallow: /private/
 Disallow: /static/
+Disallow: /.gitignore
+Disallow: /404.html
+Disallow: /CNAME
+Disallow: /README.md
