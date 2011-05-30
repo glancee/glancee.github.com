@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /demo/
+Disallow: /help/
 Disallow: /private/
 Disallow: /static/
 Disallow: /.gitignore
