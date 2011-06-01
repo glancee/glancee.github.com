@@ -41,16 +41,22 @@ a {
     text-decoration: none;
 }
 h1 {
+    margin: 10px 0;
     font-size: 26px;
 }
 h2 {
     font-size: 22px;
+    margin: 10px 0;
 }
 h3 {
     font-size: 18px;
 }
 h4 {
     font-size: 16px;
+}
+ol {
+    list-style: decimal outside;
+    margin: 0 40px;
 }
 .left {
     display: inline-block;
@@ -80,8 +86,9 @@ h4 {
     width: 800px;
     z-index: 100;
 }
-#header-logo {
+.header-logo {
     float: left;
+    margin-right: 40px;
 }
 #header-menu {
     width: 420px;
@@ -94,7 +101,7 @@ h4 {
 }
 .header-name, .link-download {
     font-size: 40px;
-    margin: 12px 0 0 5px;
+    margin: 12px 0 0 10px;
 }
 .header-line {
     clear: both;
@@ -349,4 +356,17 @@ h4 {
     font-size: 10px;
     color: red;
     position: absolute;
+}
+
+/* Tender
+ * *******************************************************/
+
+#tender_toggler {
+    background: none !important;
+    position: fixed !important;
+    top: 50px !important;
+}
+
+#tender_toggler_link {
+    border: 2px solid black !important;
 }
