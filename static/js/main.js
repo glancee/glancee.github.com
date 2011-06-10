@@ -19,7 +19,7 @@ $(function() {
         return false;
     });
 
-    $(".link-download").fancybox({
+    $(".link-fancybox").fancybox({
         'autoScale' : false,
         'hideOnOverlayClick' : false,
         'padding' : 0,

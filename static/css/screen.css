@@ -99,7 +99,7 @@ ol {
     float: right;
     margin-left: 5px;
 }
-.header-name, .link-download {
+.header-name, .link-download .link-fancybox {
     font-size: 40px;
     margin: 12px 0 0 10px;
 }
