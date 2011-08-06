@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Glancee at Foo Camp</title>
+    <link rel="stylesheet" href="/static/css/screen.css"/>
+    <link rel="stylesheet" href="/static/css/960_24_col.css"/>
+    <link rel="stylesheet" href="/static/css/bars.css"/>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.1.min.js"></script>
+    <script>
+        $(function() {
+            $(".meter > span").each(function() {
+                $(this)
+                    .data("origWidth", $(this).width())
+                    .width(0)
+                    .animate({width: $(this).data("origWidth")}, 3000);
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container_24">
+    <div class="grid_24">
+        <h1>Glancee at Foo Camp</h1>
+    </div>
+    <div class="clear"></div>
+    <div class="grid_8" style="font-weight: lighter;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet, ante eu bibendum lobortis, ipsum
+        leo vehicula metus, consectetur placerat nisl ante vel sapien.
+    </div>
+    <div class="grid_8">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet, ante eu bibendum lobortis, ipsum
+        leo vehicula metus, consectetur placerat nisl ante vel sapien.
+    </div>
+    <div class="grid_8">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet, ante eu bibendum lobortis, ipsum
+        leo vehicula metus, consectetur placerat nisl ante vel sapien.
+    </div>
+    <div class="clear"></div>
+    <!--Celebrities--------------------------------------------->
+    <div class="grid_12">
+        <h3>Top Celebrities</h3>
+    </div>
+    <div class="grid_12">
+        <h3>Top Connectors</h3>
+    </div>
+    <div class="clear"></div>
+    <div class="grid_4">
+        <ul class="legend">
+            <li>Renny Gleeson</li>
+            <li>Erik Michaels-Ober</li>
+            <li>Shawn Connally</li>
+            <li>Baratunde</li>
+            <li>Brady Forrest</li>
+            <li>JP Rangaswami</li>
+            <li>Leo Laporte</li>
+            <li>DJ Patil</li>
+            <li>Alistair Croll</li>
+            <li>Jake Spurlock</li>
+        </ul>
+    </div>
+    <div class="grid_1">
+        <ul class="legend">
+            <li>19</li>
+            <li>13</li>
+            <li>12</li>
+            <li>10</li>
+            <li>10</li>
+            <li>10</li>
+            <li>10</li>
+            <li>10</li>
+            <li>9</li>
+            <li>8</li>
+        </ul>
+    </div>
+    <div class="grid_7">
+        <div class="meter orange"><span style="width: 76%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 52%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 48%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 40%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 40%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 40%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 40%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 40%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 32%"></span></div>
+    </div>
+    <div class="grid_4">
+        <ul class="legend">
+            <li>Renny Gleeson</li>
+            <li>Erik Michaels-Ober</li>
+            <li>JP Rangaswami</li>
+            <li>Baratunde</li>
+            <li>Alistair Croll</li>
+            <li>Shawn Connally</li>
+            <li>Laurie Petrycki</li>
+            <li>Leo Laporte</li>
+            <li>Jake Spurlock</li>
+            <li>DJ Patil</li>
+        </ul>
+    </div>
+    <div class="grid_1">
+        <ul class="legend">
+            <li>23</li>
+            <li>18</li>
+            <li>15</li>
+            <li>13</li>
+            <li>13</li>
+            <li>13</li>
+            <li>9</li>
+            <li>9</li>
+            <li>9</li>
+            <li>9</li>
+        </ul>
+    </div>
+    <div class="grid_7">
+        <div class="meter orange"><span style="width: 92%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 72%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 60%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 52%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 52%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 52%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+        <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+    </div>
+    <div class="clear"></div>
+
+    <!-- Top Companies --------------------------------------------->
+    <div class="grid_12">
+        <h3>Top Companies</h3>
+        <ul class="grid_4 legend alpha">
+            <li>O'Reilly Media</li>
+            <li>Google</li>
+            <li>LinkedIn</li>
+            <li>Brown University</li>
+            <li>Microsoft</li>
+            <li>Apple Inc</li>
+            <li>Code for America</li>
+            <li>GitHub</li>
+            <li>Omidyar Network</li>
+            <li>Yahoo!</li>
+        </ul>
+        <ul class="grid_1 legend">
+            <li><img class="icon" src="http://graph.facebook.com/15137500430/picture"></li>
+            <li><img class="icon" src="http://graph.facebook.com/104958162837/picture"></li>
+            <li><img class="icon" src="http://graph.facebook.com/6191007822/picture"></li>
+            <li><img class="icon" src="http://graph.facebook.com/140998521533/picture"></li>
+            <li><img class="icon" src="http://graph.facebook.com/20528438720/picture"></li>
+            <li><img class="icon" src="http://graph.facebook.com/105596369475033/picture"></li>
+            <li><img class="icon" src="http://graph.facebook.com/115456071851382/picture"></li>
+            <li><img class="icon" src="http://graph.facebook.com/50595864761/picture"></li>
+            <li><img class="icon" src="http://graph.facebook.com/133840889959434/picture"></li>
+            <li><img class="icon" src="http://graph.facebook.com/7040724713/picture"></li>
+        </ul>
+        <ul class="grid_1 legend">
+            <li>12</li>
+            <li>7</li>
+            <li>5</li>
+            <li>4</li>
+            <li>3</li>
+            <li>2</li>
+            <li>2</li>
+            <li>2</li>
+            <li>2</li>
+            <li>2</li>
+        </ul>
+        <div class="grid_5 omega">
+            <div class="meter orange"><span style="width: 100%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 58%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 42%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 33%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 25%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 17%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 17%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 17%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 17%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 17%"></span></div>
+        </div>
+    </div>
+
+    <!-- Top Positions --------------------------------------------->
+    <div class="grid_12">
+        <h3>Top Positions</h3>
+        <ul class="grid_5 legend alpha">
+            <li>Software Engineer</li>
+            <li>Founder</li>
+            <li>Engineer</li>
+            <li>CEO</li>
+            <li>Manager</li>
+            <li>CTO</li>
+            <li>Editor</li>
+            <li>Academic</li>
+            <li>Chair or Co-Chair</li>
+            <li>Product Manager</li>
+        </ul>
+        <ul class="grid_1 legend">
+            <li>14</li>
+            <li>13</li>
+            <li>11</li>
+            <li>6</li>
+            <li>5</li>
+            <li>5</li>
+            <li>4</li>
+            <li>3</li>
+            <li>2</li>
+            <li>2</li>
+        </ul>
+        <div class="grid_5 omega">
+            <div class="meter orange"><span style="width: 100%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 93%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 79%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 43%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 29%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 21%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 14%"></span></div>
+            <div class="meter orange nostripes"><span style="width: 14%"></span></div>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <!--Footer-->
+    <div class="grid_5 prefix_2">
+        <h3>Links</h3>
+        <ul>
+            <li><a class="noborder" href="http://glancee.com">Glancee Home</a></li>
+            <li><a class="noborder" href="http://blog.glancee.com">Read our Blog</a></li>
+            <li><a class="noborder" href="http://help.glancee.com">Help and Support</a></li>
+        </ul>
+    </div>
+    <div class="grid_5">
+        <h3>More</h3>
+        <ul>
+            <li><a class="noborder" href="/agreement">User Agreement</a></li>
+            <li><a class="noborder" href="http://twitter.com/glanceeapp">Follow Us on Twitter</a></li>
+            <li><a class="noborder" href="http://facebook.com/glanceeapp">Like Us on Facebook</a></li>
+        </ul>
+    </div>
+    <div class="grid_10">
+        <h3>Hello from the Glancee team!</h3>
+        We are <a href="http://twitter.com/vccr">Andrea</a>,
+        <a href="http://twitter.com/albertotretti">Alberto</a>,
+        <a href="http://twitter.com/griseg">Gabriel</a>,
+        <a href="http://twitter.com/a_testa">Alessandro</a>, and
+        <a href="http://twitter.com/islamismailov">Islam</a>.
+        We built Glancee to bring together the best of our physical and digital lives.
+        If you love our idea, if it drives you mad, or if you just want to say hello,
+        <a href="mailto:info@glancee.com?subject=Hello Glancee!">send us an email</a>.
+    </div>
+    <div class="clear"></div>
+    <div class="grid_24 copyright">
+        © 2011 Glancee Inc.
+    </div>
+</div>
+</body>
+</html>
