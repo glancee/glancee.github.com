@@ -3,6 +3,7 @@
  * Email: andrea@glancee.com
  */
 
+@import url("meter.css");
 @import url("reset.css");
 @import url("fancybox/jquery.fancybox-1.3.4.css");
 
@@ -309,9 +310,9 @@ ol {
 /* Fancybox
  * *******************************************************/
 
-#fancybox-outer {
-    background: #000 !important;
-}
+/*#fancybox-outer {*/
+    /*background: #000 !important;*/
+/*}*/
 #fancybox-close {
     border: none;
 }
