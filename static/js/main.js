@@ -3,92 +3,134 @@
  * Email: andrea@glancee.com
  */
 
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-21455677-1']);
+_gaq.push(['_setDomainName', 'glancee.com']);
+_gaq.push(['_setAllowHash', 'false']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s);
+})();
+
 var mpmetrics;
 
 $(function() {
-
+  $.getScript("http://api.mixpanel.com/site_media/js/api/mixpanel.js", function() {
+    if (window.location.host == "localhost") {
+      return;
+    }
     try {
-        mpmetrics = new MixpanelLib("889ac641d6eac33d42e9fea6255b027d");
-
-        mpmetrics.identify(Math.random());
-        mpmetrics.track("visit-" + window.location.pathname, {"referrer":document.referrer});
-
-        mpmetrics.track_links($("#header .link-iphone"), "link-iphone", {"page":window.location.pathname, "source":"header"});
-        mpmetrics.track_links($("#matter .link-iphone"), "link-iphone", {"page":window.location.pathname, "source":"matter"});
-        mpmetrics.track_links($("#footer .link-iphone"), "link-iphone", {"page":window.location.pathname, "source":"footer"});
-        mpmetrics.track_links($("#header .link-android"), "link-android", {"page":window.location.pathname, "source":"header"});
-        mpmetrics.track_links($("#matter .link-android"), "link-android", {"page":window.location.pathname, "source":"matter"});
-        mpmetrics.track_links($("#footer .link-android"), "link-android", {"page":window.location.pathname, "source":"footer"});
-        $("#header .link-video").click(function() {
-            mpmetrics.track("link-video", {"page":window.location.pathname, "source":"header"});
-            return false;
-        });
-        $("#slider .link-video").click(function() {
-            mpmetrics.track("link-video", {"page":window.location.pathname, "source":"slider"});
-            return false;
-        });
-    } catch(e) {}
-
-    if ($("#slider").length > 0) {
-        var slider = $('#slider').bxSlider({
-            controls: false,
-            speed: 800
-        });
-        $('.slide-link').click(function() {
-            slider.goToNextSlide();
-            return false;
-        });
-        $('.slide-back').click(function() {
-            slider.goToFirstSlide();
-            return false;
-        });
+      mpmetrics = new MixpanelLib("889ac641d6eac33d42e9fea6255b027d");
+      mpmetrics.track("visit-" + window.location.pathname, {"referrer":document.referrer});
+      mpmetrics.track_links($("#header .link-iphone"), "link-iphone", {"page":window.location.pathname, "source":"header"});
+      mpmetrics.track_links($("#matter .link-iphone"), "link-iphone", {"page":window.location.pathname, "source":"matter"});
+      mpmetrics.track_links($("#footer .link-iphone"), "link-iphone", {"page":window.location.pathname, "source":"footer"});
+      mpmetrics.track_links($("#header .link-android"), "link-android", {"page":window.location.pathname, "source":"header"});
+      mpmetrics.track_links($("#matter .link-android"), "link-android", {"page":window.location.pathname, "source":"matter"});
+      mpmetrics.track_links($("#footer .link-android"), "link-android", {"page":window.location.pathname, "source":"footer"});
+      mpmetrics.track_links($("#matter .link-blog"), "link-blog", {"page":window.location.pathname, "source":"matter"});
+      mpmetrics.track_links($("#footer .link-blog"), "link-blog", {"page":window.location.pathname, "source":"footer"});
+      mpmetrics.track_links($("#matter .link-help"), "link-help", {"page":window.location.pathname, "source":"matter"});
+      mpmetrics.track_links($("#footer .link-help"), "link-help", {"page":window.location.pathname, "source":"footer"});
+      $("#bxslider .link-slide2").click(function() {
+        mpmetrics.track("link-slide2", {"page":window.location.pathname, "source":"slider"});
+        return false;
+      });
+      $("#bxslider .link-slide3").click(function() {
+        mpmetrics.track("link-slide3", {"page":window.location.pathname, "source":"slider"});
+        return false;
+      });
+      $("#header .link-video").click(function() {
+        mpmetrics.track("link-video", {"page":window.location.pathname, "source":"header"});
+        return false;
+      });
+      $("#bxslider .link-video").click(function() {
+        mpmetrics.track("link-video", {"page":window.location.pathname, "source":"slider"});
+        return false;
+      });
+    } catch(e) {
     }
-
-    if ($("#ticker").length > 0) {
-        $.getJSON('http://192.168.1.113:8080/event_json?callback=?', function(data) {
-            $.each(data['interaction'], function(index, value) {
-                $('#ticker').append('<li><img class="icon" src="'+value[0]+'"><span class="bold">'+value[2]+'</span> '+value[1]+' '+value[3]+'</li>')
-            });
-            $('#ticker').bxSlider({
-                auto: true,
-                controls: false,
-                pause: 5000,
-                speed: 800
-            });
-        });
-    }
-
-    $(".link-video").click(function() {
+  });
+  $.getScript("/static/js/jquery.fancybox-1.3.4.js", function() {
+    if ($(".link-video").length > 0) {
+      $(".link-video").click(function() {
         $.fancybox({
-            'autoScale' : false,
-            'hideOnOverlayClick' : false,
-            'padding' : 0,
-            'titleShow' : false,
-            'transitionIn' : 'none',
-            'transitionOut' : 'none',
-            'width' : 800,
-            'height' : 480,
-            'href' : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
-            'type' : 'swf',
-            'swf' : {
-                'wmode' : 'transparent',
-                'allowfullscreen' : 'true'
-            }
+          'autoScale' : false,
+          'hideOnOverlayClick' : false,
+          'padding' : 0,
+          'titleShow' : false,
+          'transitionIn' : 'none',
+          'transitionOut' : 'none',
+          'width' : 800,
+          'height' : 480,
+          'href' : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+          'type' : 'swf',
+          'swf' : {
+            'wmode' : 'transparent',
+            'allowfullscreen' : 'true'
+          }
         });
         return false;
+      });
+    }
+    if ($(".fancybox_link").length > 0) {
+      $(".fancybox_link").fancybox();
+    }
+  });
+  $.getScript("/static/js/jquery.bxslider.min.js", function() {
+    if ($("#bxslider").length > 0) {
+      var bxslider = $('#bxslider').bxSlider({
+        controls: false,
+        speed: 800
+      });
+      $('.slide-link').click(function() {
+        bxslider.goToNextSlide();
+        return false;
+      });
+      $('.slide-back').click(function() {
+        bxslider.goToFirstSlide();
+        return false;
+      });
+      function resizeSlider() {
+        var h = $(window).height() - 140;
+        if (h < 500) h = 500;
+        if (h > 600) h = 600;
+        $('#banner-600').height(h);
+        if ($(window).width() >= 960) bxslider.reloadShow();
+      }
+      $(window).load(resizeSlider);
+      $(window).resize(resizeSlider);
+    }
+    if ($("#ticker").length > 0) {
+      $.getJSON('http://localhost:8080/event_json?callback=?', function(data) {
+        $.each(data['interaction'], function(index, value) {
+          $('#ticker').append('<li><img class="icon" src="' + value[0] + '"><span class="bold">' + value[2] + '</span> ' + value[1] + ' ' + value[3] + '</li>')
+        });
+        $('#ticker').bxSlider({
+          auto: true,
+          controls: false,
+          pause: 5000,
+          speed: 800
+        });
+      });
+    }
+  });
+  $.getScript("http://view.jquery.com/trunk/plugins/validate/jquery.validate.js", function() {
+    $("#ss-thanks").toggle();
+    $("#ss-form").validate({
+      submitHandler: function(form) {
+        $.post("https://spreadsheets.google.com/a/glancee.com/formResponse?formkey=dHktYWpaYTNaOGpFZWJ3eDlVYVM2N3c6MQ", $(form).serialize());
+        $("#ss-form").fadeToggle('fast', function() {
+          $("#ss-thanks").fadeToggle('fast');
+        });
+      }
     });
-
-//    $(".link-fancybox").fancybox({
-//        'autoScale' : false,
-//        'hideOnOverlayClick' : false,
-//        'padding' : 0,
-//        'titleShow' : false,
-//        'transitionIn' : 'none',
-//        'transitionOut' : 'none'
-//    });
-//
-//    $("#countdown").countdown({until: new Date(2011, 5, 10)});
-//
+  });
 //    LR.lrInstance = new LrInstance('launchrock', {
 //        tagLine: "Disrupting real-world social interactions!",
 //        description: "Leave us your email to participate in our private beta and connect with great people.",
@@ -125,16 +167,4 @@ $(function() {
 //    $("#launchrock").resize(function() {
 //        $.fancybox.resize();
 //    });
-
-    function resizeSlider()
-    {
-        var h = $(window).height() - 140;
-        if (h < 500) h = 500;
-        if (h > 600) h = 600;
-        $('#banner-600').height(h);
-        if ($(window).width() >= 960 && slider != undefined)
-            slider.reloadShow();
-    }
-    $(window).load(resizeSlider);
-    $(window).resize(resizeSlider);
 });

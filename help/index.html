@@ -1,65 +1,129 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="target-densitydpi=device-dpi"/>
-    <meta name="Keywords" content="Glancee"/>
-    <meta name="Description" content="Glancee is a mobile app that helps you discover and connect with new interesting people around you."/>
-    <title>Glancee</title>
-    <link rel="shortcut icon" href="/favicon.png">
-    <style type="text/css">
-        body {
-            color: #555;
-            font: lighter 2em Helvetica, Arial, sans-serif;
-            line-height: 1.5em;
-            font-size: 2.5em;
-        }
-        #content {
-            margin: 0 auto;
-            padding-bottom: 20px;
-            text-align: justify;
-            width: 90%;
-        }
-        h1 {
-            text-align: center;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .note {
-            margin:  2% 0;
-            border:  1px dotted gray;
-            padding: 2%;
-            font-size: 70%;
-            line-height: 1.2em;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Glancee</title>
+  <link rel="shortcut icon" href="/favicon.png">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      $("#accordion").accordion({
+        active: false,
+        autoHeight: false,
+        collapsible: true
+      });
+    });
+  </script>
+  <style type="text/css">
+    @import "/static/css/reset.css";
+    body {
+      background: url(http://subtlepatterns.com/patterns/diagonal-noise.png);
+      color: #555;
+      font: lighter 16px/1.4 Helvetica, Arial, sans-serif;
+      padding: 0.5em;
+      text-align: justify;
+      text-shadow: 0 1px 1px white;
+    }
+    *:focus {
+      outline: none;
+    }
+    ul {
+      list-style-type: square;
+      margin-left: 1em;
+    }
+    .highlight {
+      border: 1px solid;
+      margin: -0.1em;
+      padding: 0.1em;
+    }
+    .ui-accordion {
+      border-left: 0.1em solid #609030;
+      margin: 0 0 0.5em 0.1em;
+      padding-left: 0.5em;
+    }
+    .ui-accordion .ui-accordion-header {
+      color: #609030;
+      font-weight: 600;
+      margin-top: 0.5em;
+    }
+    .ui-accordion .ui-accordion-header a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .ui-accordion .ui-accordion-content {
+      display: none;
+    }
+    .ui-accordion .ui-accordion-content-active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-<div id="content">
-    <h1>The People List</h1>
-    When you open Glancee, you see a list of people near you. Normally, these are users in the same neighborhood or at
-    the same event, but during the beta program you will see users who could actually be far from you.<br>
-    For every user, you see their name, pic, bio, and two badges: the reputation score, and the number of hidden connections.
-    Sometimes a new person comes by who is very relevant to you: you will receive a notification and the person will be
-    highlighted with a special badge.
-	<br>
-	<br>
-    <div class=image>
-    <img src="connect.png" width="100%">
-    </div>
-    <h1>The User Profile</h1>
-    When you find someone interesting, tap on their card to see their profile, which lists mutual friends and common
-    affiliations. Tap on Interests to see what they like and what interests you share, and tap on Connect to start interacting.<br>
-    Glancee lets you chat with and make a VoIP call to any Glancee user near you. This means
-    that you can easily reach out to anybody who is near you, without having to share your phone number.
-	
-	<br>
-	<br>
-	<div class=image>
-    <img src="thanks.png" width="100%">
-    </div>
-    <h1>Thank you!</h1>
-    We hope you will like Glancee. Connect with the other users and send us feedback! Enjoy!
+Hi! Tap on a topic to read more about it.
+<div id="accordion">
+  <h3><a href="#">What is Glancee?</a></h3>
+  <div>
+    Glancee is a fun and safe way to meet new people with common friends and similar interests. Interests are all things
+    important to you: artists you like, products you love, schools where you studied, companies where you worked, and
+    more.
+  </div>
+  <h3><a href="#">Getting started</a></h3>
+  <div>
+    We prepared your Glancee profile using your Facebook data as a starting point, but you can always update your bio
+    and interests in the Settings menu. When you are happy with your profile, go ahead and discover new people in the
+    People tab.
+  </div>
+  <h3><a href="#">The <span class="highlight">People</span> tab</a></h3>
+  <div>
+    Under People you will find a list of nearby users sorted by the number of connections they share with you. Each user
+    has two scores:
+    <ul>
+      <li>The reputation score is a measure of how influential and active the user is on Glancee.</li>
+      <li>The similarity score is a count of the friends and interests you share with the user.</li>
+    </ul>
+  </div>
+  <h3><a href="#">The <span class="highlight">Inbox</span> tab</a></h3>
+  <div>
+    Under Inbox you will find a list of all the conversations you entertained with other Glancee users sorted from the
+    most recent to the oldest. You can use the Inbox to pick up a conversation where you left it, or as a contact list
+    to access the profiles of the users you met on Glancee.
+  </div>
+  <h3><a href="#">The <span class="highlight">Profile</span> tab</a></h3>
+  <div>
+    When you open a user's profile, we'll show you all the connections you share. First you will see the friends you
+    have in common (if any), and then the user's interests that are similar to yours. Interests are matched using our
+    special algorithm which will recommend, for example, skiing if you like snowboarding and Quentin Tarantino if you
+    like Pulp Fiction.
+  </div>
+  <h3><a href="#">The <span class="highlight">Connect</span> tab</a></h3>
+  <div>
+    When you find a user you like, tap on the Connect tab to start a conversation. You can send text messages and even
+    call with voice-over-ip, without having to share your phone number.
+  </div>
+  <h3><a href="#">About the <span class="highlight">Settings</span></a></h3>
+  <div>
+    Under Settings you can change your bio and your interests, you can invite friends to improve your reputation score,
+    and you can lock Glancee for one hour or until 8AM of the next day. We recommend you keep your interests updated to
+    find the most interesting people.
+  </div>
+  <h3><a href="#">More on interests</a></h3>
+  <div>
+    When visiting a user profile, tap on an interest to find more information about it. This is great to discover new
+    artists and products you may not know about. You can also tap on Discuss to start a conversation about a specific
+    interest, or on Add to include the interest in your profile.
+  </div>
+  <h3><a href="#">More on recommendations</a></h3>
+  <div>
+    Sometimes a user comes by who has many connections in common with you. When this happens, you will receive a special
+    notification even if you are not using the app and the user will be highlighted in the People tab with a red ribbon.
+  </div>
+  <h3><a href="#">What devices are supported?</a></h3>
+  <div>
+    We support all iPhone and iPod Touch running iOS 4.2 or later, and all Android devices running 2.1 or later.
+  </div>
 </div>
+We really hope you like Glancee! If you'd like to send us your feedback, go to <span class="highlight">Settings > Feedback</span>
 </body>
-</html>
+</html> 

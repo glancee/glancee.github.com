@@ -1,41 +1,42 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <title>Glancee at Foo Camp</title>
-    <link rel="stylesheet" href="/static/css/reset.css"/>
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.1.min.js"></script>
-    <script type="text/javascript" src="/static/js/jquery.totemticker.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $.getJSON('http://192.168.1.113:8080/event_json?callback=?&event_id=' + 1, function(data) {
-                var event = data['event'];
-                var count = data['count'];
-                $.each(data['interactions'], function(index, value) {
-                    $('#vertical-ticker').append('<li>' + value[1] + ' ' + value[0] + ' ' + value[2] + '</li>')
-                });
-            });
-            $('#vertical-ticker').totemticker({ row_height : '100px' , direction : 'up' });
+  <meta charset="utf-8"/>
+  <meta name="description" content="Glancee is a mobile app that helps you discover and connect with new interesting people around you. Download Glancee for iPhone and Android devices."/>
+  <title>Glancee at Foo Camp</title>
+  <link rel="stylesheet" href="/static/css/reset.css"/>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.totemticker.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $.getJSON('http://localhost:8080/event_json?callback=?&event_id=' + 1, function(data) {
+        var event = data['event'];
+        var count = data['count'];
+        $.each(data['interactions'], function(index, value) {
+          $('#vertical-ticker').append('<li>' + value[1] + ' ' + value[0] + ' ' + value[2] + '</li>')
         });
-    </script>
-    <style>
-        #vertical-ticker {
-            height: 400px;
-            margin: 0;
-            overflow: hidden;
-            padding: 0;
-        }
-        #vertical-ticker li {
-            background: #efefef;
-            border-bottom: 1px dotted #ddd;
-            color: #333;
-            display: block;
-            font: bold 25px Helvetica Neue, times, serif;
-            height: 30px;
-            padding: 35px 0;
-            text-align: center;
-        }
-    </style>
+      });
+      $('#vertical-ticker').totemticker({ row_height : '100px' , direction : 'up' });
+    });
+  </script>
+  <style>
+    #vertical-ticker {
+      height: 400px;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+    #vertical-ticker li {
+      background: #efefef;
+      border-bottom: 1px dotted #ddd;
+      color: #333;
+      display: block;
+      font: bold 25px Helvetica Neue, times, serif;
+      height: 30px;
+      padding: 35px 0;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 <ul id="vertical-ticker"></ul>

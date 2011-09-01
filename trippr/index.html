@@ -7,28 +7,10 @@
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="stylesheet" href="/static/css/screen.css"/>
   <link rel="stylesheet" href="/static/css/960_24.css"/>
-  <!--<script type="text/javascript" src="http://api.mixpanel.com/site_media/js/api/mixpanel.js"></script>-->
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
-  <script type="text/javascript" src="/static/js/jquery.baresize.min.js"></script>
-  <script type="text/javascript" src="/static/js/jquery.fancybox-1.3.4.js"></script>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script type="text/javascript" src="/static/js/main.js"></script>
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-21455677-1']);
-    _gaq.push(['_setDomainName', 'glancee.com']);
-    _gaq.push(['_setAllowHash', 'false']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script');
-      ga.type = 'text/javascript';
-      ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script>
     $(function() {
       $("#map_canvas").height(600);
@@ -36,7 +18,6 @@
       var map = new google.maps.Map(document.getElementById("map_canvas"), opt);
       var trafficLayer = new google.maps.TrafficLayer();
       trafficLayer.setMap(map);
-      $(".timeline_link").fancybox();
     });
   </script>
 </head>
@@ -52,30 +33,18 @@
     <a class="right noborder" href="/">
       <img src="/static/images/trippr-logo-glancee.png">
     </a>
-
     <div class="header-line">
       <h1>Travel in group. Earn points. Be green.</h1>
     </div>
   </div>
   <div class="slide clearfix">
     <img class="left" src="/static/images/trippr-slide.png">
-
     <div class="slide-caption">
       <div class="slide-name">Meet Trippr</div>
-      <!--<div class="slide-link">-->
-      <!--<a class="noborder" href="http://youtube.com/v/64DHa7E8DBs?version=3&autohide=1&autoplay=1&rel=0&showinfo=0&showsearch=0">-->
-      <!--Watch the video-->
-      <!--</a>-->
-      <!--</div>-->
       <div class="slide-text">
         Trippr is a mobile app that rewards you for travelling in group.
         The more people you travel with, the more points you get!<br><br>
       </div>
-      <!--<div class="slide-name">Tripping in SF</div>-->
-      <!--<div class="slide-text">-->
-      <!---->
-      <!---->
-      <!--</div>-->
       <div class="slide-link" style="margin-right: 100px;">
         <a class="noborder" href="#matter">
           Show me more
@@ -105,16 +74,16 @@
     <h3>Top Citizens</h3>
     <span class="small">This is a list of the most tripping citizens, that is the citizens that most travel in group.</span>
     <ul class="grid_4 legend alpha">
-      <li><a class="timeline_link" href="#popup_citizen">Andrea V. 94112</a></li>
-      <li><a class="timeline_link" href="#popup_citizen">Alberto T. 94110</a></li>
-      <li><a class="timeline_link" href="#popup_citizen">Gabriel G. 94116</a></li>
-      <li><a class="timeline_link" href="#popup_citizen">Alessandro T. 94124</a></li>
-      <li><a class="timeline_link" href="#popup_citizen">Islam I. 94100</a></li>
-      <li><a class="timeline_link" href="#popup_citizen">John A. 94108</a></li>
-      <li><a class="timeline_link" href="#popup_citizen">Amanda K. 94124</a></li>
-      <li><a class="timeline_link" href="#popup_citizen">Jessica N. 94102</a></li>
-      <li><a class="timeline_link" href="#popup_citizen">Elena M. 94140</a></li>
-      <li><a class="timeline_link" href="#popup_citizen">William T. 94116</a></li>
+      <li><a class="fancybox_link" href="#popup_citizen">Andrea V.</a></li>
+      <li><a class="fancybox_link" href="#popup_citizen">Alberto T.</a></li>
+      <li><a class="fancybox_link" href="#popup_citizen">Gabriel G.</a></li>
+      <li><a class="fancybox_link" href="#popup_citizen">Alessandro T.</a></li>
+      <li><a class="fancybox_link" href="#popup_citizen">Islam I.</a></li>
+      <li><a class="fancybox_link" href="#popup_citizen">John A.</a></li>
+      <li><a class="fancybox_link" href="#popup_citizen">Amanda K.</a></li>
+      <li><a class="fancybox_link" href="#popup_citizen">Jessica N.</a></li>
+      <li><a class="fancybox_link" href="#popup_citizen">Elena M.</a></li>
+      <li><a class="fancybox_link" href="#popup_citizen">William T.</a></li>
     </ul>
     <ul class="grid_1 legend">
       <li>100</li>
@@ -145,16 +114,16 @@
     <h3>Top Streets</h3>
     <span class="small">This is a list of the streets that most facilitate group travel and sustainable mobility.</span>
     <ul class="grid_4 legend alpha">
-      <li><a class="timeline_link" href="#popup_route">California Street</a></li>
-      <li><a class="timeline_link" href="#popup_route">Columbus Avenue</a></li>
-      <li><a class="timeline_link" href="#popup_route">Geary Boulevard</a></li>
-      <li><a class="timeline_link" href="#popup_route">Lincoln Way</a></li>
-      <li><a class="timeline_link" href="#popup_route">Mission Street</a></li>
-      <li><a class="timeline_link" href="#popup_route">19th Avenue</a></li>
-      <li><a class="timeline_link" href="#popup_route">Stockton Street</a></li>
-      <li><a class="timeline_link" href="#popup_route">Grant Avenue</a></li>
-      <li><a class="timeline_link" href="#popup_route">Polk Street</a></li>
-      <li><a class="timeline_link" href="#popup_route">Van Ness Avenue</a></li>
+      <li><a class="fancybox_link" href="#popup_route">California Street</a></li>
+      <li><a class="fancybox_link" href="#popup_route">Columbus Avenue</a></li>
+      <li><a class="fancybox_link" href="#popup_route">Geary Boulevard</a></li>
+      <li><a class="fancybox_link" href="#popup_route">Lincoln Way</a></li>
+      <li><a class="fancybox_link" href="#popup_route">Mission Street</a></li>
+      <li><a class="fancybox_link" href="#popup_route">19th Avenue</a></li>
+      <li><a class="fancybox_link" href="#popup_route">Stockton Street</a></li>
+      <li><a class="fancybox_link" href="#popup_route">Grant Avenue</a></li>
+      <li><a class="fancybox_link" href="#popup_route">Polk Street</a></li>
+      <li><a class="fancybox_link" href="#popup_route">Van Ness Avenue</a></li>
     </ul>
     <ul class="grid_1 legend">
       <li>100</li>
@@ -192,12 +161,11 @@
   <div class="grid_24">
     <h3></h3>
     <a class="noborder" href="/"><img src="/static/images/trippr-builtby.png"></a>
-
   </div>
 </div>
 <div class="container_24 margin-b-20" id="footer">
   <div class="grid_24 copyright">
-    © 2011 Glancee Inc.<br><br>
+    © 2011 Glancee<br><br>
     <a class="noborder" href="http://mixpanel.com/f/partner"><img src="http://mixpanel.com/site_media/images/partner/badge_light.png" alt="Web Analytics"/></a>
   </div>
 </div>

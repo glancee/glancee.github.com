@@ -4,7 +4,6 @@ Disallow: /help/
 Disallow: /party/
 Disallow: /private/
 Disallow: /static/
-Disallow: /tutorial/
 Disallow: /.gitignore
 Disallow: /404.html
 Disallow: /CNAME
