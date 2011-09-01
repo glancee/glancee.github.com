@@ -4,58 +4,19 @@
   <meta charset="utf-8" />
   <meta name="description" content="{MetaDescription}">
   <title>{Title}</title>
-  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="shortcut icon" href="http://glancee.com/favicon.png">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
-  <link rel="apple-touch-icon" href="{PortraitURL-128}">
-
-  <meta name="color:Ground" content="#ffffff"/>
-  <meta name="color:Master" content="#609030"/>
   <meta name="image:Ground" content=""/>
   <meta name="image:Header" content=""/>
-  <meta name="text:Google Analytics ID" content="" />
-
   <meta property="fb:app_id" content="134485623246987">
-
   <style type="text/css" media="screen">
-
-  /* RESET */
-  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-  }
-  body {
-    line-height: 1;
-  }
-  ol, ul {
-    list-style: none;
-  }
-  blockquote, q {
-    quotes: none;
-  }
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
+  @import "http://glancee.com/static/css/reset.css";
   /* GLOBAL ELEMENTS */
   body {
-    background: {color:Ground};
-    {block:IfGroundImage}background: url({image:Ground});{/block:IfGroundImage}
-    background-attachment:fixed;
+    background: url({image:Ground});
     text-align: justify;
   }
-  body, input, textarea {
+  body, input {
     color: #555;
     font: lighter 16px/1.6 Helvetica, Arial, sans-serif;
   }
@@ -77,13 +38,9 @@
     margin: 0 40px 20px;
   }
   a {
-    color: {color:Master};
+    color: #609030;
     text-decoration: none;
   }
-  a:focus, a:hover {
-    text-decoration: underline;
-  }
-
   /* STRUCTURE */
   #tw-root {
     position: fixed;
@@ -93,18 +50,9 @@
   #tw-root .twtr-ft {
     height: 1px;
   }
-  #glancee {
-    position: fixed;
-    bottom: 0;
-    left: -9999px;
-    z-index: -1;
-  }
   #wrapper {
     background: #fff;
-    border: 10px solid {color:Master};
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border: 10px solid #609030;
     margin: 20px auto;
     padding: 20px 60px;
     width: 500px;
@@ -146,7 +94,6 @@
     font-size: 12px;
     padding: 20px 0;
   }
-
   /* POST */
   .post {
     border-top: 1px solid #ccc;
@@ -185,7 +132,10 @@
     color: #333;
     font-weight: bold;
   }
-
+  .post .credits {
+    float: right;
+    font-size: 10px;
+  }
   /* POST META */
   .tags {
     font-size: 12px;
@@ -193,15 +143,12 @@
   }
   .tags a {
     border: 1px solid #ccc;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     margin-right: 1px;
     padding: 2px 8px;
   }
   .tags a:focus, .tags a:hover {
-    border-color: {color:Master};
-    color: {color:Master};
+    border-color: #609030;
+    color: #609030;
     text-decoration: none;
   }
   .date {
@@ -222,7 +169,6 @@
   .facebook-comments {
     margin-top: 20px;
   }
-
   /* PAGINATION */
   .pagination {
     border-top: 1px solid #ccc;
@@ -236,14 +182,14 @@
     float: left;
     margin-right: 20px;
   }
-  .pagination .previous-page, .pagination .page-number, .pagination .next-page {
+  .pagination .prev-page, .pagination .page-number, .pagination .next-page {
     float: right;
     margin-left: 20px;
   }
   .pagination a {
     color: #555;
   }
-  .pagination .previous-page a {
+  .pagination .prev-page a {
     background: url("http://static.tumblr.com/euguvyd/pJkl457a4/lightweight-small-icons.png") no-repeat left -48px;
     padding: 1px 0 1px 20px;
   }
@@ -251,16 +197,25 @@
     background: url("http://static.tumblr.com/euguvyd/pJkl457a4/lightweight-small-icons.png") no-repeat right -64px;
     padding: 1px 20px 1px 0;
   }
-
   {CustomCSS}
-
   </style>
-
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
   <script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js"></script>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
   <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21455677-1']);
+    _gaq.push(['_setDomainName', 'glancee.com']);
+    _gaq.push(['_addIgnoredRef', 'glancee.com']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
     $(function() {
       $("#tw-root").css("left", $(window).width() * .5 + 350);
       $(window).resize(function() {
@@ -393,7 +348,7 @@
             <span class="random"><a href="/random">Random</a></span>
             {block:NextPage}<span class="next-page"><a href="{NextPage}">Next Page</a></span>{/block:NextPage}
             <span class="page-number">Page {CurrentPage} of {TotalPages}</span>
-            {block:PreviousPage}<span class="previous-page"><a href="{PreviousPage}">Previous Page</a></span>{/block:PreviousPage}
+            {block:PreviousPage}<span class="prev-page"><a href="{PreviousPage}">Previous Page</a></span>{/block:PreviousPage}
           </div><!-- .pagination -->
         {/block:Pagination}
     </div><!-- #main -->
@@ -404,17 +359,7 @@
       <a href="/">&copy; {Title} Inc.</a> All Rights Reserved.
     </div>
   </div><!-- #wrapper -->
-
-  {block:IfGoogleAnalyticsID}
-  <script type="text/javascript">
-    var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");
-    document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-    try{var pageTracker=_gat._getTracker("{text:Google Analytics ID}");pageTracker._trackPageview()}catch(err){}
-  </script>
-  {block:IfGoogleAnalyticsID}
-
+  <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#appId=130276447064396&amp;xfbml=1"></script>
   <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -422,8 +367,5 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
   </script>
-
-  <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#appId=130276447064396&amp;xfbml=1"></script>
 </body>
 </html>
-
