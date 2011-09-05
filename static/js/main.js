@@ -20,6 +20,14 @@ _gaq.push(['_trackPageview']);
 var mpmetrics;
 
 $(function() {
+  // Modified from http://gist.github.com/1136488
+  $('a[href^="http"]:not([href*="glancee.com"]),a[href^="mailto"],a[href$=".pdf"]').click(function(e) {
+    _gaq.push(['_trackEvent', 'Links', $(this).attr('href'), $(this).closest('[id!=""]').attr('id')]);
+    if (!(e.which == 2 || e.metaKey || e.ctrlKey || e.shiftKey)) {
+      setTimeout('document.location="' + $(this).attr('href') + '"', 200);
+      return false;
+    }
+  });
   $.getScript("http://api.mixpanel.com/site_media/js/api/mixpanel.js", function() {
     if (window.location.host == "localhost") {
       return;
