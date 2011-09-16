@@ -23,7 +23,7 @@ $(function() {
   // Modified from http://gist.github.com/1136488
   $('a[href^="http"]:not([href*="glancee.com"]),a[href^="mailto"],a[href$=".pdf"]').click(function(e) {
     _gaq.push(['_trackEvent', 'Links', $(this).attr('href'), $(this).closest('[id!=""]').attr('id')]);
-    if (!(e.which == 2 || e.metaKey || e.ctrlKey || e.shiftKey)) {
+    if (!(e.which == 2 || e.metaKey || e.ctrlKey || e.shiftKey || $(this).hasClass("link-video") || $(this).hasClass("link-fancy"))) {
       setTimeout('document.location="' + $(this).attr('href') + '"', 200);
       return false;
     }
@@ -86,8 +86,8 @@ $(function() {
         return false;
       });
     }
-    if ($(".fancybox_link").length > 0) {
-      $(".fancybox_link").fancybox();
+    if ($(".link-fancy").length > 0) {
+      $(".link-fancy").fancybox();
     }
   });
   $.getScript("/static/js/jquery.bxslider.min.js", function() {
