@@ -59,6 +59,10 @@ body {
   font: lighter 14px/1.5 Helvetica, Arial, sans-serif;
 }
 
+strong {
+  font-weight: 600;
+}
+
 a {
   border-bottom: 1px dotted;
   color: inherit;
