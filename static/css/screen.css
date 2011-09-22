@@ -102,6 +102,11 @@ ol {
   margin: 0 40px;
 }
 
+.title {
+  font-size: 44px;
+  border-right: 1px solid #aaa;
+}
+
 .left {
   display: inline-block;
   float: left;
