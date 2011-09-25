@@ -32,10 +32,6 @@
   <div class="grid_12 justify">
     <h3>Major Events</h3>
     <ul id="events">
-      <li id="2011-05-02">
-        <h4>2011-05-02 | Glancee Beta released</h4>
-        We released the first beta to 50 users. Many of them invited their friends.
-      </li>
       <li id="2011-06-8">
         <h4>2011-06-8 | Glancee 1.0 released</h4>
         We publicly released 1.0 to continue testing with more users and events.
@@ -56,8 +52,8 @@
         <h4>2011-08-30 | Glancee 1.2.5 released</h4>
         The new version came with better matching improved voice-over-ip.
       </li>
-      <li id="2011-09-04">
-        <h4>2011-09-04 | Preparing for Vator Splash</h4>
+      <li id="2011-09-08">
+        <h4>2011-09-08 | Preparing for Vator Splash</h4>
         We asked our users to vote for us. We collected 260+ votes in 5 days.
       </li>
     </ul>
@@ -120,10 +116,11 @@
         },
         xAxis: {
           type: 'datetime',
+          min: 1306886400000,
           plotBands: [
             {
               color: '#ddd',
-              label: { align: 'left', rotation: 90, style: { color: '#aaa' }, text: 'Current week. Numbers are partial.', x: 6, y: 6 },
+              label: { align: 'left', rotation: 90, style: { color: '#aaa' }, text: 'Current week', x: 6, y: 6 },
               from: data['time_max'] - 604800000,
               to: data['time_max']
             }
@@ -146,8 +143,8 @@
           borderWidth: 0
         },
         series: [
-          {data: data['accounts_signup'], name: 'Registered Users'},
-          {data: data['accounts_active'], name: 'Active Users'}
+          {data: data['signups'], marker: { enabled: false }, name: 'Registered Users'},
+          {data: data['actives'], marker: { enabled: false }, name: 'Active Users'}
         ]
       });
       var chart2 = new Highcharts.Chart({
@@ -162,10 +159,11 @@
         },
         xAxis: {
           type: 'datetime',
+          min: 1306886400000,
           plotBands: [
             {
               color: '#ddd',
-              label: { align: 'left', rotation: 90, style: { color: '#aaa' }, text: 'Current week. Numbers are partial.', x: 6, y: 6 },
+              label: { align: 'left', rotation: 90, style: { color: '#aaa' }, text: 'Current week', x: 6, y: 6 },
               from: data['time_max'] - 604800000,
               to: data['time_max']
             }
@@ -188,8 +186,8 @@
           borderWidth: 0
         },
         series: [
-          {data: data['profiles'], name: 'Profiles Viewed'},
-          {data: data['messages'], name: 'Messages Sent'}
+          {data: data['profiles'], marker: { enabled: false }, name: 'Profiles Viewed'},
+          {data: data['messages'], marker: { enabled: false }, name: 'Messages Sent'}
         ]
       });
 
