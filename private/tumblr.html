@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="{MetaDescription}">
+  <title>{Title}</title>
+  <link rel="shortcut icon" href="http://glancee.com/favicon.png">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <meta name="image:Ground" content=""/>
+  <meta name="image:Header" content=""/>
+  <meta property="fb:app_id" content="134485623246987">
+  <style type="text/css" media="screen">
+  @import "http://glancee.com/static/css/reset.css";
+  /* GLOBAL ELEMENTS */
+  body {
+    background: url({image:Ground});
+    text-align: justify;
+  }
+  body, input {
+    color: #555;
+    font: lighter 16px/1.6 Helvetica, Arial, sans-serif;
+  }
+  input:focus {
+    outline-width: 0;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  blockquote {
+    border-left: 5px solid #ccc;
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+  hr {
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin: 0 40px 20px;
+  }
+  a {
+    color: #609030;
+    text-decoration: none;
+  }
+  /* STRUCTURE */
+  #tw-root {
+    position: fixed;
+    left: -9999px;
+    top: 20px;
+  }
+  #tw-root .twtr-ft {
+    height: 1px;
+  }
+  #wrapper {
+    background: #fff;
+    border: 10px solid #609030;
+    margin: 20px auto;
+    padding: 20px 60px;
+    width: 500px;
+  }
+  #menu {
+    border-bottom: 1px solid #ccc;
+    font-size: 12px;
+    height: 20px;
+    padding: 20px 0;
+  }
+  .pages li {
+    float: left;
+    margin: 3px 10px 3px 0;
+  }
+  .pages a {
+    color: #555;
+    text-transform: uppercase;
+  }
+  .search input {
+    background: none;
+    border: 1px solid #ccc;
+    color: #aaa;
+    float: right;
+    font-size: 12px;
+  }
+  .search input.search-text {
+    height: 20px;
+    width: 140px;
+  }
+  .search input.search-submit {
+    height: 24px;
+  }
+  #header {
+    padding: 40px 0;
+    text-align: center;
+  }
+  .footer {
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+    padding: 20px 0;
+  }
+  /* POST */
+  .post {
+    border-top: 1px solid #ccc;
+    padding: 20px 0 40px;
+  }
+  .post h3 {
+    font: 22px/1.6 Georgia, serif;
+    margin-bottom: 20px;
+  }
+  .post img {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  .post ul {
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+  .post ul li {
+    list-style-type: disc;
+  }
+  .post ul ul li {
+    list-style-type: circle;
+  }
+  .post ol {
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+  .post ol li {
+    list-style-type: upper-latin;
+  }
+  .post ol ol li {
+    list-style-type: lower-latin;
+  }
+  .post .label {
+    color: #333;
+    font-weight: bold;
+  }
+  .post .credits {
+    float: right;
+    font-size: 10px;
+  }
+  /* POST META */
+  .tags {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .tags a {
+    border: 1px solid #ccc;
+    margin-right: 1px;
+    padding: 2px 8px;
+  }
+  .tags a:focus, .tags a:hover {
+    border-color: #609030;
+    color: #609030;
+    text-decoration: none;
+  }
+  .date {
+    float: right;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .twitter-share-button {
+    float: left;
+    margin-right: 16px;
+  }
+  .plusone-share-button {
+    float: left;
+  }
+  .facebook-share-button {
+    float: left;
+  }
+  .facebook-comments {
+    margin-top: 20px;
+  }
+  /* PAGINATION */
+  .pagination {
+    border-top: 1px solid #ccc;
+    color: #555;
+    font-size: 12px;
+    overflow: hidden;
+    padding: 10px 0;
+    text-transform: uppercase;
+  }
+  .pagination .archive, .pagination .random {
+    float: left;
+    margin-right: 20px;
+  }
+  .pagination .prev-page, .pagination .page-number, .pagination .next-page {
+    float: right;
+    margin-left: 20px;
+  }
+  .pagination a {
+    color: #555;
+  }
+  .pagination .prev-page a {
+    background: url("http://static.tumblr.com/euguvyd/pJkl457a4/lightweight-small-icons.png") no-repeat left -48px;
+    padding: 1px 0 1px 20px;
+  }
+  .pagination .next-page a {
+    background: url("http://static.tumblr.com/euguvyd/pJkl457a4/lightweight-small-icons.png") no-repeat right -64px;
+    padding: 1px 20px 1px 0;
+  }
+  {CustomCSS}
+  </style>
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  <script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21455677-1']);
+    _gaq.push(['_setDomainName', 'glancee.com']);
+    _gaq.push(['_addIgnoredRef', 'glancee.com']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+    $(function() {
+      $("#tw-root").css("left", $(window).width() * .5 + 350);
+      $(window).resize(function() {
+        $("#tw-root").css("left", $(window).width() * .5 + 350);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="fb-root"></div>
+  <div id="tw-root">
+    <script>
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 6,
+        interval: 4000,
+        width: 250,
+        height: 300,
+        theme: {
+          shell: {
+            background: '#609030',
+            color: '#ffffff'
+          },
+          tweets: {
+            background: '#ffffff',
+            color: '#555555',
+            links: '#609030'
+          }
+        },
+        features: {
+          scrollbar: false,
+          loop: false,
+          live: false,
+          hashtags: true,
+          timestamp: true,
+          avatars: false,
+          behavior: 'all'
+        }
+      }).render().setUser('glanceeapp').start();
+    </script>
+  </div>
+  <div id="wrapper">
+    <div id="menu">
+      <form class="search" action="/search" method="get">
+        <input type="submit" value="SEARCH" class="search-submit" />
+        <input type="text" name="q" value="{SearchQuery}" class="search-text" />
+      </form>
+      <ul class="pages">
+        {block:HasPages}
+          {block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}
+        {/block:HasPages}
+        {block:AskEnabled}
+          <li><a href="/ask">{AskLabel}</a></li>
+        {/block:AskEnabled}
+        {block:SubmissionsEnabled}
+          <li><a href="/submit">{SubmitLabel}</a></li>
+        {/block:SubmissionsEnabled}
+        <li><a href="{RSS}">RSS</a></li>
+      </ul>
+    </div>
+    <div id="header">
+      <h1>
+        {block:IfHeaderImage}<a href="/"><img src="{image:Header}" alt="{Title}"></a>{/block:IfHeaderImage}
+        {block:IfNotHeaderImage}<a href="/">{Title}</a>{/block:IfNotHeaderImage}
+      </h1>
+    </div><!-- #header -->
+    <div id="main">
+        {block:Posts}
+          <div class="post">
+            {block:Text}
+              {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+              {Body}
+            {/block:Text}
+            {block:Photo}
+              <h3><a href="{Permalink}">New Pics!</a></h3>
+              <img src="{PhotoURL-500}" class="photo" alt="{PhotoAlt}">
+              {block:Caption}<p>{Caption}</p>{/block:Caption}
+            {/block:Photo}
+            {block:Photoset}
+              <h3><a href="{Permalink}">New Pics!</a></h3>
+              {Photoset-500}
+              {block:Caption}<p>{Caption}</p>{/block:Caption}
+            {/block:Photoset}
+            {block:Quote}
+              <h3><a href="{Permalink}">New Quote!</a></h3>
+              <blockquote>{Quote}</blockquote>
+              {block:Source}<p>{Source}</p>{/block:Source}
+            {/block:Quote}
+            {block:Link}
+              <h3><a href="{Permalink}">New Link!</a></h3>
+              <a class="label" href="{URL}" {Target}>{Name}</a>
+              {block:Description}<p>{Description}</p>{/block:Description}
+            {/block:Link}
+            {block:Chat}
+              {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+              <p>
+              {block:Lines}
+                  {block:Label}<span class="label">{Label}</span>{/block:Label}{Line}<br>
+              {/block:Lines}
+              </p>
+            {/block:Chat}
+            {block:Audio}
+              <h3><a href="{Permalink}">New Audio!</a></h3>
+              {AudioPlayerGrey}
+              {block:Caption}<p>{Caption}</p>{/block:Caption}
+            {/block:Audio}
+            {block:Video}
+              <h3><a href="{Permalink}">New Video!</a></h3>
+              {Video-500}
+              {block:Caption}<p>{Caption}</p>{/block:Caption}
+            {/block:Video}
+            {block:HasTags}
+              <div class="tags">
+                {block:Tags}<a href="{TagURL}" class="single-tag">{Tag}</a> {/block:Tags}
+              </div>
+            {/block:HasTags}
+            <a href="http://twitter.com/share" class="twitter-share-button" data-url="{Permalink}" data-text="{Title}" data-count="horizontal" data-via="glanceeapp">Tweet</a>
+            <div class="plusone-share-button"><g:plusone size="medium" href="{Permalink}"></g:plusone></div>
+            <fb:like href="{Permalink}" class="facebook-share-button" layout="button_count" send="false" show_faces="false"  width="90"></fb:like>
+            {block:Date}<div class="date">{Month} {DayOfMonthWithZero}, {Year}</div>{/block:Date}
+            {block:PermalinkPage}
+              <fb:comments href="{Permalink}" class="facebook-comments" num_posts="2" width="500"></fb:comments>
+            {/block:PermalinkPage}
+          </div><!-- .post -->
+        {/block:Posts}
+        {block:Pagination}
+          <div class="pagination">
+            <span class="archive"><a href="/archive">Archive</a></span>
+            <span class="random"><a href="/random">Random</a></span>
+            {block:NextPage}<span class="next-page"><a href="{NextPage}">Next Page</a></span>{/block:NextPage}
+            <span class="page-number">Page {CurrentPage} of {TotalPages}</span>
+            {block:PreviousPage}<span class="prev-page"><a href="{PreviousPage}">Previous Page</a></span>{/block:PreviousPage}
+          </div><!-- .pagination -->
+        {/block:Pagination}
+    </div><!-- #main -->
+    <div class="footer">
+      {Description}
+    </div>
+    <div class="footer">
+      <a href="/">&copy; {Title} Inc.</a> All Rights Reserved.
+    </div>
+  </div><!-- #wrapper -->
+  <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#appId=130276447064396&amp;xfbml=1"></script>
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+</body>
+</html>

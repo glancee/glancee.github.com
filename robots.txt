@@ -1,8 +1,11 @@
 User-agent: *
 Disallow: /demo/
+Disallow: /foocamp/
 Disallow: /help/
+Disallow: /party/
 Disallow: /private/
 Disallow: /static/
+Disallow: /stats/
 Disallow: /.gitignore
 Disallow: /404.html
 Disallow: /CNAME
