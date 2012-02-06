@@ -6,7 +6,7 @@
   <title>Glancee</title>
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="stylesheet" href="/static/css/screen.css"/>
-  <link rel="stylesheet" href="/static/css/960_12.css"/>
+  <link rel="stylesheet" href="/static/css/960_24.css"/>
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
   <script type="text/javascript" src="/static/js/main.js"></script>
@@ -14,110 +14,266 @@
 <body>
 <div id="banner-400" style="background: url(/static/images/events.jpg) center;">
   <div id="header">
-    <a class="left noborder" href="/"> <img src="/static/images/logo.png" alt="Glancee"> </a>
+    <a class="left noborder" href="/"><img src="/static/images/logo.png" alt="Glancee"></a>
+    <a class="right noborder link-download link-fapp" href="http://apps.facebook.com/glancee">
+      <img src="/static/images/download-facebook.png"></a>
     <a class="right noborder link-download link-android" href="http://market.android.com/details?id=com.glancee.mobile.android">
-      <img src="/static/images/download-android.png"> </a>
+      <img src="/static/images/download-android.png"></a>
     <a class="right noborder link-download link-iphone" href="http://itunes.apple.com/us/app/glancee/id440898938">
-      <img src="/static/images/download-iphone.png"> </a>
-    <a class="right link-video" href="http://youtube.com/v/64DHa7E8DBs?version=3&autohide=1&autoplay=1&rel=0&showinfo=0&showsearch=0">
-      Watch the video to learn more about Glancee </a>
+      <img src="/static/images/download-iphone.png"></a>
+    <a class="right link-video" href="http://youtube.com/v/eP91hAobaeI?autoplay=1&rel=0&showinfo=0&showsearch=0">
+      Watch the video to learn more</a>
     <div class="header-line">
-      <h1>Meet Glancee for Events. Engage your audience.</h1>
+      <h1>Discover and connect with new interesting people around you!</h1>
     </div>
   </div>
 </div>
-<div class="container_12" id="matter">
-  <div class="grid_6 justify">
-    <h3>Why Glancee?</h3>
-    Glancee is a social utility that brings people together by finding the important connections they share. During
-    occasions like conferences, concerts, and sport games Glancee can help event planners create more engaging
-    experiences for attendees and sponsors.
-    <h4>For Attendees</h4>
-    With Glancee, attendees will be able to easily find others who share common friends and similar interests. Glancee
-    makes it easy to connect through instant messaging, voice-over-ip calls, and email. This helps people create new,
-    meaningful connections and participate in more interesting conversations, making your event that much more valuable.
-    <h4>For Sponsors</h4>
-    Staff members and your sponsors can be listed in Glancee as featured users. This makes them appear at the top of our
-    main screen, where we list the most interesting people near the current user. Moreover, if the sponsors will use
-    Glancee too, they will be able to easily discover those in the crowd that are more interested in their services.
-    <h4>Understand your crowd</h4>
-    Finally, we make it easy to get detailed insights of the type of people that are attending your event. Where do they
-    come from? What is their level of education? What are they interested in? How do they interact with other attendees?
-    Our data engine can answer these questions through the analysis of aggregate data, without compromising our users'
-    privacy.
-  </div>
-  <div class="grid_6 justify">
-    <h3>Getting started</h3>
-    To use Glancee for your event, we just need the name, website, time, and place of the event. When Glancee users
-    arrive at the event, they will be greeted by a welcome message to your event and they will be asked to check-in.
-    Once in, they will be able to connect with your featured sponsors and other attendees. If you are interested in
-    finding out more, fill out the form below.
-    <form action="/" method="POST" id="ss-form" class="clearfix">
-      <div class="errorbox-good">
-        <div class="ss-item  ss-text">
-          <div class="ss-form-entry">
-            <label class="ss-q-title" for="entry_0">Contact Name</label>
-            <label class="ss-q-help" for="entry_0">Required</label><br>
-            <input type="text" name="entry.0.single" value="" class="ss-q-short required" id="entry_0">
-          </div>
-        </div>
-      </div>
+<div class="container_24" id="matter">
+  <div class="grid_24 justify">
+    <div class="grid_12 alpha">
       <br>
-      <div class="errorbox-good">
-        <div class="ss-item  ss-text">
-          <div class="ss-form-entry">
-            <label class="ss-q-title" for="entry_1">Contact Email</label> <label class="ss-q-help" for="entry_1">Required</label><br>
-            <input type="text" name="entry.1.single" value="" class="ss-q-short required email" id="entry_1">
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="errorbox-good">
-        <div class="ss-item  ss-text">
-          <div class="ss-form-entry">
-            <label class="ss-q-title" for="entry_2">Event Website</label> <label class="ss-q-help" for="entry_2">Required</label><br>
-            <input type="text" name="entry.2.single" value="" class="ss-q-short required url" id="entry_2">
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="errorbox-good">
-        <div class="ss-item  ss-paragraph-text">
-          <div class="ss-form-entry">
-            <label class="ss-q-title" for="entry_3">Event Description</label> <label class="ss-q-help" for="entry_3">Optional</label><br>
-            <textarea name="entry.3.single" rows="8" cols="75" class="ss-q-long" id="entry_3"></textarea>
-          </div>
-        </div>
-      </div>
-      <br> <input type="hidden" name="pageNumber" value="0"> <input type="hidden" name="backupCache" value="">
-      <div class="ss-item ss-navigate">
-        <div class="ss-form-entry">
-          <input type="submit" name="submit" value="Submit">
-        </div>
-      </div>
-    </form>
-    <div id="ss-thanks">
-      Thank you for your interest, we will get back to you shortly. Meanwhile, you can go back to <a href="/">our
-      home</a> and try Glancee if you haven't done so already.<br><br> The Glancee Team
+      <h3>Engage your audience</h3>
+      Glancee is a social utility that brings people together by finding the important connections they share. With instantmessaging and
+      VoIP your attendees will engage in new conversations and build important relationships that will last over time, adding value to your
+      event even long after it is over.
+    </div>
+    <div class="grid_12 omega">
+      <img src="/static/images/events-example1.png">
     </div>
   </div>
-  <div class="grid_12 center bordered">
-    For more information, <a href="mailto:info@glancee.com?subject=Hello Glancee!">send us an email</a>.
+  <div class="grid_24 justify">
+    <div class="grid_12 alpha">
+      <img src="/static/images/events-example2.png">
+    </div>
+    <div class="grid_12 omega">
+      <br>
+      <h3>Support your sponsors and staff</h3>
+      Staff members and sponsors can be listed as featured users to appear on top of the list and be easily recognized. Featured users can
+      broadcast important information and receive live feedback. In this way, sponsors can get more visibility and directly engage with
+      people interested in their services.
+    </div>
+  </div>
+  <div class="grid_24 justify">
+    <div class="grid_12 alpha">
+      <br>
+      <h3>Understand your crowd</h3>
+      Our engine also provides detailed insights in real-time about the people that are attending your event and the connections they are
+      forming. Who are your most popular attendees? Where do they work? What do they do? What do they like? Our spatial analytics answer
+      these questions without compromising their privacy.
+    </div>
+    <div class="grid_12 omega">
+      <img src="/static/images/events-example3.png">
+    </div>
+  </div>
+  <div class="grid_24 center bordered">
+    This report was generated after our pilot at <a href="http://en.wikipedia.org/wiki/Foo_Camp">Foo Camp 2011.</a>
+    For more information about Glancee <a href="mailto:info@glancee.com?subject=Glancee for events">send us an email</a>.
+  </div>
+  <div class="grid_12">
+    <h3>Top Celebrities</h3>
+    <ul class="grid_4 legend alpha">
+      <li>Renny Gleeson</li>
+      <li>Erik Michaels-Ober</li>
+      <li>Shawn Connally</li>
+      <li>Baratunde Thurston</li>
+      <li>Brady Forrest</li>
+      <li>JP Rangaswami</li>
+      <li>Leo Laporte</li>
+      <li>DJ Patil</li>
+      <li>Alistair Croll</li>
+      <li>Jake Spurlock</li>
+    </ul>
+    <ul class="grid_1 legend">
+      <li><img class="icon" src="http://graph.facebook.com/308180/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/702453221/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/712115840/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/2244/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/614995769/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/503340673/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/100001269330931/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/675433703/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/683310594/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/203001338/picture"></li>
+    </ul>
+    <ul class="grid_1 legend">
+      <li>19</li>
+      <li>13</li>
+      <li>12</li>
+      <li>10</li>
+      <li>10</li>
+      <li>10</li>
+      <li>10</li>
+      <li>10</li>
+      <li>9</li>
+      <li>8</li>
+    </ul>
+    <div class="grid_5 omega">
+      <div class="meter orange"><span style="width: 76%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 52%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 48%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 40%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 40%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 40%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 40%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 40%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 32%"></span></div>
+    </div>
+  </div>
+  <div class="grid_12">
+    <h3>Top Connectors</h3>
+    <ul class="grid_4 legend alpha">
+      <li>Renny Gleeson</li>
+      <li>Erik Michaels-Ober</li>
+      <li>JP Rangaswami</li>
+      <li>Baratunde Thurston</li>
+      <li>Alistair Croll</li>
+      <li>Shawn Connally</li>
+      <li>Laurie Petrycki</li>
+      <li>Leo Laporte</li>
+      <li>Jake Spurlock</li>
+      <li>DJ Patil</li>
+    </ul>
+    <ul class="grid_1 legend">
+      <li><img class="icon" src="http://graph.facebook.com/308180/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/702453221/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/503340673/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/2244/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/683310594/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/712115840/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/769052677/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/100001269330931/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/203001338/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/675433703/picture"></li>
+    </ul>
+    <ul class="grid_1 legend">
+      <li>23</li>
+      <li>18</li>
+      <li>15</li>
+      <li>13</li>
+      <li>13</li>
+      <li>13</li>
+      <li>9</li>
+      <li>9</li>
+      <li>9</li>
+      <li>9</li>
+    </ul>
+    <div class="grid_5 omega">
+      <div class="meter orange"><span style="width: 92%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 72%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 60%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 52%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 52%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 52%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+    </div>
+  </div>
+  <div class="grid_12">
+    <h3>Top Companies</h3>
+    <ul class="grid_4 legend alpha">
+      <li>O'Reilly Media</li>
+      <li>Google</li>
+      <li>LinkedIn</li>
+      <li>Brown University</li>
+      <li>Microsoft</li>
+      <li>Apple Inc</li>
+      <li>Code for America</li>
+      <li>GitHub</li>
+      <li>Omidyar Network</li>
+      <li>Yahoo!</li>
+    </ul>
+    <ul class="grid_1 legend">
+      <li><img class="icon" src="http://graph.facebook.com/15137500430/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/104958162837/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/6191007822/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/140998521533/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/20528438720/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/137947732957611/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/115456071851382/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/50595864761/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/133840889959434/picture"></li>
+      <li><img class="icon" src="http://graph.facebook.com/7040724713/picture"></li>
+    </ul>
+    <ul class="grid_1 legend">
+      <li>12</li>
+      <li>7</li>
+      <li>5</li>
+      <li>4</li>
+      <li>3</li>
+      <li>2</li>
+      <li>2</li>
+      <li>2</li>
+      <li>2</li>
+      <li>2</li>
+    </ul>
+    <div class="grid_5 omega">
+      <div class="meter orange"><span style="width: 100%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 58%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 42%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 33%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 25%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 17%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 17%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 17%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 17%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 17%"></span></div>
+    </div>
+  </div>
+  <div class="grid_12">
+    <h3>Top Positions</h3>
+    <ul class="grid_5 legend alpha">
+      <li>Software Engineer</li>
+      <li>Founder</li>
+      <li>Engineer</li>
+      <li>CEO</li>
+      <li>Manager</li>
+      <li>CTO</li>
+      <li>Editor</li>
+      <li>Academic</li>
+      <li>Chair or Co-Chair</li>
+      <li>Product Manager</li>
+    </ul>
+    <ul class="grid_1 legend">
+      <li>14</li>
+      <li>13</li>
+      <li>11</li>
+      <li>6</li>
+      <li>5</li>
+      <li>5</li>
+      <li>4</li>
+      <li>3</li>
+      <li>2</li>
+      <li>2</li>
+    </ul>
+    <div class="grid_5 omega">
+      <div class="meter orange"><span style="width: 100%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 93%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 79%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 43%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 36%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 29%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 21%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 14%"></span></div>
+      <div class="meter orange nostripes"><span style="width: 14%"></span></div>
+    </div>
   </div>
 </div>
-<div class="container_12 margin-b-20" id="footer">
-  <div class="grid_3">
+<div class="container_24 margin-b-20" id="footer">
+  <div class="grid_6">
     <h3>Links</h3>
     <ul>
-      <li><a class="noborder link-iphone" href="http://itunes.apple.com/us/app/glancee/id440898938">Download for
-        iPhone</a></li>
-      <li><a class="noborder link-android" href="http://market.android.com/details?id=com.glancee.mobile.android">Download
-        for Android</a></li>
+      <li><a class="noborder link-iphone" href="http://itunes.apple.com/us/app/glancee/id440898938">Download for iPhone</a></li>
+      <li><a class="noborder link-android" href="http://market.android.com/details?id=com.glancee.mobile.android">Download for Android</a></li>
+      <li><a class="noborder link-fapp" href="http://apps.facebook.com/glancee">Check out our Facebook App</a></li>
       <li><a class="noborder link-blog" href="http://blog.glancee.com">Read our Blog</a></li>
       <li><a class="noborder link-help" href="http://help.glancee.com">Help and Support</a></li>
     </ul>
   </div>
-  <div class="grid_3">
+  <div class="grid_6">
     <h3>More</h3>
     <ul>
       <li><a class="noborder link-events" href="/events">Glancee for Events</a></li>
@@ -126,16 +282,15 @@
       <li><a class="noborder link-twitter" href="http://twitter.com/glanceeapp">Follow Us on Twitter</a></li>
     </ul>
   </div>
-  <div class="grid_6">
+  <div class="grid_12">
     <h3>Hello from the Glancee team!</h3>
-    We are <a href="http://twitter.com/vccr">Andrea</a>, <a href="http://twitter.com/albertotretti">Alberto</a>,
-    <a href="http://twitter.com/griseg">Gabriel</a>, <a href="http://twitter.com/a_testa">Alessandro</a>, and
-    <a href="http://twitter.com/islamismailov">Islam</a>. We created Glancee to bring together the best of our physical
-    and digital worlds. <br>If you like our idea, if it drives you mad, or if you just want to say hello,
+    Hi! We are <a href="http://andreavaccari.com">Andrea</a>, <a href="http://twitter.com/albertotretti">Alberto</a>,
+    and <a href="http://twitter.com/griseg">Gabriel</a>. We created Glancee to bring together the best of our physical
+    and digital worlds. If you like our idea,<br>if it drives you mad, or if you just want to say hello,
     <a href="mailto:info@glancee.com?subject=Hello Glancee!">send us an email</a>.
   </div>
-  <div class="grid_12 copyright">
-    © 2011 Glancee<br><br>
+  <div class="grid_24 copyright">
+    © 2012 Glancee<br><br>
     <a class="noborder" href="http://mixpanel.com/f/partner"><img src="http://mixpanel.com/site_media/images/partner/badge_light.png" alt="Web Analytics"/></a>
   </div>
 </div>
