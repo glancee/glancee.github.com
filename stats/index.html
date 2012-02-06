@@ -4,9 +4,10 @@
   <meta charset="utf-8"/>
   <meta name="description" content="Glancee is a mobile app that helps you discover and connect with new interesting people around you. Download Glancee for iPhone and Android devices."/>
   <title>Glancee Stats</title>
+  <link rel="shortcut icon" href="/favicon.png">
   <link rel="stylesheet" href="/static/css/screen.css"/>
   <link rel="stylesheet" href="/static/css/960_24.css"/>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="/static/js/highcharts.js"></script>
   <style>
     .chart {
@@ -69,8 +70,8 @@
       <h3>Links</h3>
       <ul>
         <li><a class="noborder link-iphone" href="http://itunes.apple.com/us/app/glancee/id440898938">Download for iPhone</a></li>
-        <li><a class="noborder link-android" href="http://market.android.com/details?id=com.glancee.mobile.android">Download for Android</a>
-        </li>
+        <li><a class="noborder link-android" href="http://market.android.com/details?id=com.glancee.mobile.android">Download for Android</a></li>
+        <li><a class="noborder link-facebook-app" href="http://apps.facebook.com/glancee">Check out the Facebook App</a></li>
         <li><a class="noborder link-blog" href="http://blog.glancee.com">Read our Blog</a></li>
         <li><a class="noborder link-help" href="http://help.glancee.com">Help and Support</a></li>
       </ul>
@@ -85,18 +86,14 @@
       </ul>
     </div>
     <div class="grid_12">
-      <h3>Hello from the Glancee team!</h3>
-      We are <a href="http://twitter.com/vccr">Andrea</a>,
-      <a href="http://twitter.com/albertotretti">Alberto</a>,
-      <a href="http://twitter.com/griseg">Gabriel</a>,
-      <a href="http://twitter.com/a_testa">Alessandro</a>, and
-      <a href="http://twitter.com/islamismailov">Islam</a>.
-      We created Glancee to bring together the best of our physical and digital worlds.
-      <br>If you like our idea, if it drives you mad, or if you just want to say hello,
-      <a href="mailto:info@glancee.com?subject=Hello Glancee!">send us an email</a>.
+        <h3>Hello from the Glancee team!</h3>
+        Hi! We are <a href="http://andreavaccari.com">Andrea</a>, <a href="http://twitter.com/albertotretti">Alberto</a>,
+        and <a href="http://twitter.com/griseg">Gabriel</a>. We created Glancee to bring together the best of our physical
+        and digital worlds. If you like our idea,<br>if it drives you mad, or if you just want to say hello,
+        <a href="mailto:info@glancee.com?subject=Hello Glancee!">send us an email</a>.
     </div>
     <div class="grid_24 copyright">
-      © 2011 Glancee<br><br>
+      © 2012 Glancee<br><br>
       <a class="noborder" href="http://mixpanel.com/f/partner"><img src="http://mixpanel.com/site_media/images/partner/badge_light.png" alt="Web Analytics"/></a>
     </div>
   </div>
@@ -104,6 +101,7 @@
 <script>
   $(function() {
     jQuery.getJSON('/stats/index.json', null, function(data) {
+    //jQuery.getJSON('http://localhost:8080/stats?callback=?', null, function(data) {
       var chart1 = new Highcharts.Chart({
         chart: {
           renderTo: 'chart-1'

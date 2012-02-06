@@ -138,6 +138,11 @@ ol {
   text-align: justify;
 }
 
+.justify img {
+  display: block;
+  margin: 0 auto;
+}
+
 .margin-t-20 {
   margin-top: 20px;
 }
