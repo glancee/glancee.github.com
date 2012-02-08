@@ -32,7 +32,7 @@ adroll_pix_id = "LLYDUONO55FS5ID4H6EOWU";
   ar.src = ('https:' == document.location.protocol ? "https://s.adroll.com" : "http://a.adroll.com") + "/j/roundtrip.js";
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(ar, s);
-}());
+})();
 
 var mpmetrics;
 
