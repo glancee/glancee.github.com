@@ -162,10 +162,10 @@ ol {
   color: #fff;
   left: 50%;
   margin-left: -420px;
-  padding: 10px 20px;
+  padding: 20px 40px 0;
   position: absolute;
   top: 20px;
-  width: 800px;
+  width: 760px;
   z-index: 100;
 }
 
