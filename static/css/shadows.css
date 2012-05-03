@@ -153,9 +153,9 @@
   -moz-box-shadow: none;
   box-shadow: none;
   -webkit-transform: rotate(+1deg);
-  +moz+transform: rotate(+1deg);
-  +ms+transform: rotate(+1deg);
-  +o+transform: rotate(+1deg);
+  -moz-transform: rotate(+1deg);
+  -ms-transform: rotate(+1deg);
+  -o-transform: rotate(+1deg);
   transform: rotate(+1deg);
 }
 .rotated_n3 {
@@ -173,9 +173,9 @@
   -moz-box-shadow: none;
   box-shadow: none;
   -webkit-transform: rotate(+3deg);
-  +moz+transform: rotate(+3deg);
-  +ms+transform: rotate(+3deg);
-  +o+transform: rotate(+3deg);
+  -moz-transform: rotate(+3deg);
+  -ms-transform: rotate(+3deg);
+  -o-transform: rotate(+3deg);
   transform: rotate(+3deg);
 }
 .rotated_n5 {
@@ -193,9 +193,9 @@
   -moz-box-shadow: none;
   box-shadow: none;
   -webkit-transform: rotate(+5deg);
-  +moz+transform: rotate(+5deg);
-  +ms+transform: rotate(+5deg);
-  +o+transform: rotate(+5deg);
+  -moz-transform: rotate(+5deg);
+  -ms-transform: rotate(+5deg);
+  -o-transform: rotate(+5deg);
   transform: rotate(+5deg);
 }
 .rotated_n1 > :first-child:before,

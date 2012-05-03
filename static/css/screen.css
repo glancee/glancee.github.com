@@ -117,19 +117,6 @@ ol {
   float: right;
 }
 
-.small {
-  font-size: 12px;
-}
-
-.noborder, .noborder:hover, .noborder:focus {
-  border: none;
-}
-
-.bordered {
-  border: 1px solid #aaa;
-  padding: 20px 0;
-}
-
 .center {
   text-align: center;
 }
@@ -141,6 +128,23 @@ ol {
 .justify img {
   display: block;
   margin: 0 auto;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.large {
+  font-size: 16px;
+}
+
+.bordered {
+  border: 1px solid #aaa;
+  padding: 20px 0;
+}
+
+.noborder, .noborder:hover, .noborder:focus {
+  border: none;
 }
 
 .margin-t-20 {
@@ -186,7 +190,6 @@ ol {
 }
 
 #header .link-download, #header .link-fancybox {
-  /*font-size: 40px;*/
   margin: 12px 0 10px 10px;
 }
 
@@ -281,6 +284,11 @@ ol {
   font-size: 12px;
 }
 
+#buttons {
+  margin: 350px auto 0;
+  width: 280px;
+}
+
 /* Matter
  * *******************************************************/
 #ticker li {
@@ -342,7 +350,7 @@ ol {
   width: 100px
 }
 
-/* Tender
+/* Cards
  * *******************************************************/
 
 .face {
@@ -354,13 +362,22 @@ ol {
   border-bottom: 1px solid #888;
   margin-bottom: 2px;
 }
+.fname {
+  font-size: 15px;
+  margin-top: 4px;
+  margin-bottom: -4px;
+}
+.lname {
+  border-bottom: 1px solid #888;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
 .line {
-  color: #888;
   font-size: 12px;
   line-height: 14px;
 }
 .city {
-  color: #888;
   font-size: 12px;
   font-weight: 600;
 }
@@ -451,4 +468,3 @@ ol {
 #sharebuttons {
   padding-top: 10px;
 }
-
