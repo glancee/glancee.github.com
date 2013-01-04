@@ -1,10 +1,4 @@
 User-agent: *
-Disallow: /help/
-Disallow: /offline/
-Disallow: /party/
-Disallow: /private/
-Disallow: /static/
-Disallow: /stats/
 Disallow: /.gitignore
 Disallow: /404.html
 Disallow: /CNAME
