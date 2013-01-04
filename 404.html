@@ -1,47 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8"/>
-  <meta name="Description" content="Glancee is a mobile app that helps you discover and connect with new interesting people around you."/>
-  <title>Glancee</title>
-  <link rel="shortcut icon" href="/favicon.png">
-  <style type="text/css">
-    body {
-      color: #fff;
-      font: lighter 26px Helvetica, Arial, sans-serif;
-    }
-    #back {
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-    #header {
-      background: url(/static/images/bg-black.png);
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      left: 50%;
-      margin-left: -340px;
-      padding: 20px 40px;
-      position: absolute;
-      top: 60%;
-      width: 600px;
-    }
-  </style>
-  <script>
-    var path = window.location.pathname;
-    while (path[0] == "/") path = path.substring(1);
-    while (path[path.length - 1] == "/") path = path.substring(0, path.length - 2);
-    if (path.length == 5 && path.indexOf("/") < 0)
-      window.location.replace("http://glancee.com?ref=" + path);
-  </script>
+<meta http-equiv="refresh" content="0;url=/" />
 </head>
-<body>
-<img id="back" src="/static/images/404.jpg">
-<div id="header">
-  <a href="http://glancee.com/"><img src="/static/images/logo.png" alt="Glancee"></a><br>
-  Sorry, the page you are looking for doesn't exist!
-</div>
-</body>
 </html>
